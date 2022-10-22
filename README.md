@@ -9,11 +9,13 @@ TODO: storyline around a "car" container which is too secure. Try to repair it, 
 Detroit to find the flag.
 
 Connect to GKE cluster:
+
 ```bash
 gcloud container clusters get-credentials kubecon-na-ctf-1 --zone europe-central2-a --project natalia-testing-288908
 ```
 
 Example "car" pod spec:
+
 ```bash
 apiVersion: v1
 kind: Pod
