@@ -28,3 +28,8 @@ spec:
     ports:
     - containerPort: 80
 ```
+
+- [Foobar Taxi Setup](https://github.com/denhamparry/foobar-taxi-setup)
+- [BeepBeep](https://github.com/denhamparry/beepbeep)
+- [Boombox](https://github.com/denhamparry/boombox)
+
