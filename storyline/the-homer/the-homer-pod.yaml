@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: homer-pod
+  namespace: the-homer
+spec:
+  containers:
+  - name: homer-pod
+    image: nginx:latest
+    ports:
+    - containerPort: 80
