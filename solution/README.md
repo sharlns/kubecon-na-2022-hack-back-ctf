@@ -29,6 +29,12 @@ aws configure set default.output "json"
 aws --endpoint-url=http://bucket.foobar.com:4566 s3 cp s3://foobar-creds/config ./config
 ```
 
+> NOTE: if <bucket.foobar.com> hasn't been added to the `/etc/hosts` file, then use this:
+
+```sh
+aws --endpoint-url=http://localhost:4566 s3 cp s3://foobar-creds/config ./config
+```
+
 - Use the config file to connect to the cluster:
 
 ```sh

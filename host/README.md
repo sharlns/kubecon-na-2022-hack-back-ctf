@@ -11,10 +11,20 @@
 
 ### Cluster Setup
 
-- TODO
+- TODO: Natalia to put GKE script together to re-create cluster that we're using
 
 ### Presentation Setup
 
+- Setup hosts file:
+
+```sh
+echo '127.0.0.1 gitlab.foobar.com | sudo tee -a /etc/hosts
+echo '127.0.0.1 bucket.foobar.com | sudo tee -a /etc/hosts
+```
+
+- TODO: test out [Google Drive zip](https://drive.google.com/file/d/1F_fQopb5djCfu0kAkw1NQxDspSaSh0sb/view?usp=sharing)
+  - If working, we could host zip in git repo as its under 50mb
+  - unzip into this directory
 - Run `docker-compose up -d`
 
 ### Application Setup

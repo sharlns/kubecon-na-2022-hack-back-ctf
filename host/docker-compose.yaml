@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+
+  gitlab:
+    container_name: "foobar-git"
+    image: 'gitlab/gitlab-ce:latest'
+    hostname: 'git.foobar.com'
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - '$GITLAB_HOME/config:/etc/gitlab'
+      - '$GITLAB_HOME/logs:/var/log/gitlab'
+      - '$GITLAB_HOME/data:/var/opt/gitlab'
+    shm_size: '256m'
+
+  localstack:
+    container_name: "foobar-saas"
+    image: localstack/localstack
+    ports:
+      - "127.0.0.1:4566:4566"            # LocalStack Gateway
+      - "127.0.0.1:4510-4559:4510-4559"  # external services port range
+    environment:
+      - EDGE_PORT=4566
+      - SERVICES=S3
