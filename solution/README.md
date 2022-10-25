@@ -6,7 +6,16 @@
   - Use credentials:
     - u: `root`
     - p: `Ikn0wwh@ty0ud1dl@5tKub3C0n3`
-- Go to <>
+- Go to <http://gitlab.foobar.com/gitlab-instance-f01e4d8a/foobar-taxi>
+  - Review README
+- Go to <http://gitlab.foobar.com/gitlab-instance-f01e4d8a/foobar-taxi/-/commits/main>
+  - Review the git commit messages
+- Go to <http://gitlab.foobar.com/gitlab-instance-f01e4d8a/foobar-taxi/-/commit/f0e9ad8ac74a428da5c2a4835a633a7bac6b1193>
+  - Review for file that has been added by mistake
+
+## Part 1 - Flag
+
+- FLAG(IckyThumb)
 
 ## Part 2 - Get config from Bucket
 
