@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: intersection
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: beep-beep
+  namespace: intersection
+  labels:
+    name: beep-beep
+spec:
+  selector:
+    matchLabels:
+      name: beep-beep
+  template:
+    metadata:
+      labels:
+        name: beep-beep
+    spec:
+      containers:
+      - name: beep-beep
+        image: denhamparry/app-3de9011a2d7a88b77bd0cff16b71b356
+        resources:
+          limits:
+            memory: 200Mi
+          requests:
+            cpu: 100m
+            memory: 200Mi
+      terminationGracePeriodSeconds: 30
+---

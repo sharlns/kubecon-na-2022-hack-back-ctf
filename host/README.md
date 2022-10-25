@@ -12,17 +12,14 @@
 
 - TODO
 
-### Application Setup
-
-- TODO
-  - Run `kubectl apply -f the-homer.yaml`
-  - Run `./kubepwned-config.sh`
-  - Run ``
-
 ### Presentation Setup
 
 - TODO
-  - Local GitLab and LocalStack setup
+- Local GitLab and LocalStack setup
+
+### Application Setup
+
+- Run `./setup.sh`
 
 ## Checks
 
@@ -51,7 +48,7 @@ sudo nano /etc/hosts
 
 ### musicbox reset
 
-- [ ] Reset `musicbox`
+- [ ] Reset `boombox`
 
 ```sh
 kubectl delete pods -A --selector app=musicbox
