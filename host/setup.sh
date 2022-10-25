@@ -2,15 +2,15 @@
 
 # Setup the-homer
 
-kubectl apply -f ./the-homer.yaml
+kubectl apply -f ./k8s/the-homer.yaml
 
 # Setup beep-beep
 
-kubectl apply -f ./beep-beep.yaml
+kubectl apply -f ./k8s/beep-beep.yaml
 
 # Setup boomboz
 
-kubectl apply -f ./boombox.yaml
+kubectl apply -f ./k8s/boombox.yaml
 
 # Create a new SA and create a config file
 
