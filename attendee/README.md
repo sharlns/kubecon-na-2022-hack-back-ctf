@@ -46,7 +46,7 @@ from: ******@gmail.com
 to:   ******@protonmail.com
 subject:  Re: Paid track day
 
-My username is root for some reason, so you can use that on gitlab.foobar.com.
+My username is root for some reason, so you can use that on GitLab.foobar.com.
 
 Password is Ikn0wwh@ty0ud1dl@5tKub3C0n3 (Case sensitive!)
 
