@@ -7,6 +7,14 @@ talk presented at KubeCon NA 2022 in Detroit.
 
 The setup document can be found [here](./host/README.md).
 
+## Attendee - Getting Started
+
+The attendee document can be found [here](./attendee/README.md)
+
+## Solution
+
+The solution to the CTF can be found [here](./solution/README.md)
+
 ## External Resources
 
 - [Foobar Taxi Setup](https://github.com/denhamparry/foobar-taxi-setup)
