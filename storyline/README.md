@@ -1,12 +1,16 @@
 # Storyline
 
-Someone from your company was paid $10,000 to be given the root password to your GitLab server.
+Someone from your company, Foobar, was paid $10,000 to share the root password to your GitLab server.
 
 Taking the role of the attacker, see how you can disrupt Detroit's traffic system whilst listening to some tracks by local artists.
 
+## Company
+
+The CTF is based around the taxi company __Foobar__. They are an industry leading taxi company who are targeted by many actors due to the size and profile of the company. Actors look to disrupt their services to weaken their profile within the market, gain access to credentials to pivot within the system, credentials for denial of wallet attacks, and also for bragging rights
+
 ## Recon
 
-Here are your credentials to start with:
+Here are the credentials to start with:
 
 - website: <http://gitlab.foobar.com>
 - username: `root`
