@@ -1,3 +1,13 @@
+# Solution
+
+## Part 1 - Gitlab
+
+- Access <gitlab.foobar.com>
+  - Use credentials:
+    - u: `root`
+    - p: `Ikn0wwh@ty0ud1dl@5tKub3C0n3`
+  - 
+
 # Challenge 1 - Aut0m0tiv3 - Solution
 
 Connect to GKE cluster:

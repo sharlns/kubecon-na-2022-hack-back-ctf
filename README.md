@@ -3,6 +3,10 @@
 This repository contains the example CTF challenges for the "Hack Back; Let’s Learn Security With CTFs!"
 talk presented at KubeCon NA 2022 in Detroit.
 
+## Host - Getting Started
+
+The setup document can be found [here](./host/README.md).
+
 ## External Resources
 
 - [Foobar Taxi Setup](https://github.com/denhamparry/foobar-taxi-setup)
