@@ -1,6 +1,6 @@
 # Storyline
 
-Someone from your company, Foobar, was paid $10,000 to share the root password to your GitLab server.
+Someone from your company, Foobar, was paid $10,000 to shares the root password to your GitLab server.
 
 Taking the role of the attacker, see how you can disrupt Detroit's traffic system whilst listening to some tracks by local artists.
 
