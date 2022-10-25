@@ -40,3 +40,15 @@ subjects:
   - kind: ServiceAccount
     name: the-homer-sa
     namespace: the-homer
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: homer-pod
+  namespace: the-homer
+spec:
+  containers:
+  - name: homer-pod
+    image: cgr.dev/chainguard/nginx:latest
+    ports:
+    - containerPort: 80

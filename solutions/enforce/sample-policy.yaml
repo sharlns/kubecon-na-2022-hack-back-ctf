@@ -1,0 +1,13 @@
+apiVersion: policy.sigstore.dev/v1beta1
+kind: ClusterImagePolicy
+metadata:
+  name: sample-policy
+spec:
+  images:
+  - glob: "ghcr.io/chainguard-dev/*/*"
+  - glob: "ghcr.io/chainguard-dev/*"
+  - glob: "index.docker.io/*"
+  - glob: "index.docker.io/*/*"
+  authorities:
+  - keyless:
+      url: https://fulcio.sigstore.dev
