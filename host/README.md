@@ -133,3 +133,16 @@ sudo nano /etc/hosts
 ```sh
 kubectl delete pods -A --selector app=musicbox
 ```
+
+## Tear down
+
+When you've finished the CTF you can delete your cluster.
+
+1. Delete the GCP Project:
+
+```bash
+gcloud project delete $PROJECT
+```
+
+__NOTE__: If all else fails, delete the project from the [Google Cloud Console UI](https://console.cloud.google.com/cloud-resource-manager)
+
