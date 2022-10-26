@@ -10,9 +10,9 @@ services:
       - '80:80'
       - '443:443'
     volumes:
-      - '$GITLAB_HOME/config:/etc/gitlab'
-      - '$GITLAB_HOME/logs:/var/log/gitlab'
-      - '$GITLAB_HOME/data:/var/opt/gitlab'
+      - '$GITLAB_HOME/data/git-data:/var/opt/gitlab/git-data'
+      - '$GITLAB_HOME/data/gitaly:/var/opt/gitlab/gitaly'
+      - '$GITLAB_HOME/data/postgresql:/var/opt/gitlab/postgresql'
     shm_size: '256m'
 
   localstack:

@@ -13,7 +13,39 @@
 
 ### Cluster
 
-Create a GKE cluster:
+1. Sign into GCP:
+
+```bash
+gcloud auth login
+```
+
+2. Create a GCP project:
+
+```bash
+export PROJECT="ctf-$RANDOM"
+gcloud projects create $PROJECT
+gcloud config set project $PROJECT
+```
+
+__NOTE__: After you finish the CTF, you can delete the project, removing all resources associated with the project.
+
+3. Make sure that billing is enabled for your Cloud project.
+  - Learn how to [check if billing is enabled on a project](https://cloud.google.com/billing/docs/how-to/verify-billing-enabled).
+  - Run this command to get a URL in your terminal to enable billing with: 
+
+```bash
+echo "https://console.cloud.google.com/billing/linkedaccount\?project\=$PROJECT"
+```
+
+4. Enable the GKE service API
+
+```bash
+gcloud services enable container.googleapis.com
+```
+
+__NOTE__: If you have an error regarding _billing_, please review the previous step
+
+5. Create a GKE cluster:
 
 ```bash
 export NAME="$(whoami)-$RANDOM"
@@ -25,22 +57,35 @@ gcloud container clusters create "${NAME}" \
 
 ### Presentation Setup
 
-- Setup hosts file:
+1. Setup `/etc/hosts` file:
+
+__NOTE__: Updating the `/etc/hosts` file allows you to use a URL on your machines browser to view GitLab and access the bucket.
 
 ```sh
-echo '127.0.0.1 gitlab.foobar.com | sudo tee -a /etc/hosts
-echo '127.0.0.1 bucket.foobar.com | sudo tee -a /etc/hosts
+sudo -- sh -c -e "echo '127.0.0.1 gitlab.foobar.com' >> /etc/hosts";
+sudo -- sh -c -e "echo '127.0.0.1 bucket.foobar.com' >> /etc/hosts";
 ```
 
-- TODO: test out [Google Drive zip](https://drive.google.com/file/d/1F_fQopb5djCfu0kAkw1NQxDspSaSh0sb/view?usp=sharing)
-  - If working, we could host zip in git repo as its under 50mb
-  - unzip this directory into `kubecon-na-2022-hack-bak-ctf/host`
+2. Unzip the GitLab data:
 
-- Run `docker-compose up -d`
+```sh
+unzip gitlab.zip
+```
+
+3. Run `docker-compose up -d`
+
+__NOTE__: When running this for the first time, it can take 10 minutes to get GitLab up and running
+  - Wait for it to return healthy:
+
+```sh
+docker ps
+```
 
 ### Application Setup
 
-- Run `./setup.sh`
+You currently have cluster-admin access to your cluster. This means we can setup the cluster for the CTF.
+
+1. Run `./setup.sh`
 
 ## Checks
 
