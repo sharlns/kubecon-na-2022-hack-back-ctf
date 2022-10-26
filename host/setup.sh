@@ -44,7 +44,7 @@ users:
     user:
       token: ${token}
 current-context: ${serviceAccount}@${clusterName}
-" >> ${newfile}
+" > ${newfile}
 
 # Configure S3 bucket
 
