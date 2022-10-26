@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: homer-pod-privileged
+  namespace: the-homer
+spec:
+  hostPID: true
+  hostNetwork: true
+  containers:
+  - name: homer-pod-privileged
+    image: cgr.dev/chainguard/nginx:latest
+    ports:
+    - containerPort: 80
+    securityContext:
+      privileged: true

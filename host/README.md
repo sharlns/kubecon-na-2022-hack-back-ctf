@@ -7,11 +7,20 @@
 - [aws cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 - [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)
 
+
 ## Setup
 
-### Cluster Setup
+### Cluster
 
-- TODO: Natalia to put GKE script together to re-create cluster that we're using
+Create a GKE cluster:
+
+```bash
+export NAME="$(whoami)-$RANDOM"
+gcloud container clusters create "${NAME}" \
+  --labels "usage=dev,owner=$(whoami)" \
+  --zone us-west2-a \
+  --num-nodes 1
+```
 
 ### Presentation Setup
 
@@ -29,7 +38,6 @@ echo '127.0.0.1 bucket.foobar.com | sudo tee -a /etc/hosts
 
 ### Application Setup
 
-- TODO: create dynamic variable for cluster name in `setup.sh`
 - Run `./setup.sh`
 
 ## Checks

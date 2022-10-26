@@ -8,13 +8,13 @@ kubectl apply -f ./k8s/the-homer.yaml
 
 kubectl apply -f ./k8s/beep-beep.yaml
 
-# Setup boomboz
+# Setup boombox
 
 kubectl apply -f ./k8s/boombox.yaml
 
 # Create a new SA and create a config file
 
-clusterName=gke_natalia-testing-288908_europe-central2-a_kubecon-na-ctf-1
+clusterName=$NAME
 namespace=the-homer
 serviceAccount=the-homer-sa
 newfile=config
@@ -46,12 +46,14 @@ users:
 current-context: ${serviceAccount}@${clusterName}
 " >> ${newfile}
 
-# Copy the config file to the bucket
+# Configure S3 bucket
 
 aws configure set aws_access_key_id "uUcDGYowgomWC8Z5"
 aws configure set aws_secret_access_key "FLAG(IckyThumb)"
 aws configure set default.region "us-east-1"
 aws configure set default.output "json"
+
+# Copy config file to S3 bucket
 
 aws --endpoint-url=http://localhost:4566 s3 mb s3://foobar-creds
 aws --endpoint-url=http://localhost:4566 s3 cp config s3://foobar-creds
