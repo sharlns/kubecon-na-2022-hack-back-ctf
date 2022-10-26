@@ -72,7 +72,11 @@ sudo -- sh -c -e "echo '127.0.0.1 bucket.foobar.com' >> /etc/hosts";
 unzip gitlab.zip
 ```
 
-3. Run `docker-compose up -d`
+3. Run Docker Compose to create the local environment:
+
+```sh
+docker-compose up -d
+```
 
 __NOTE__: When running this for the first time, it can take 10 minutes to get GitLab up and running
   - Wait for it to return healthy:
@@ -85,7 +89,17 @@ docker ps
 
 You currently have cluster-admin access to your cluster. This means we can setup the cluster for the CTF.
 
-1. Run `./setup.sh`
+1. Setup cluster applications:
+
+```sh
+./setup.sh
+```
+
+```txt
+CONTAINER ID   IMAGE                     COMMAND                  CREATED          STATUS                    PORTS                                                                    NAMES
+e4a54c804338   gitlab/gitlab-ce:latest   "/assets/wrapper"        12 minutes ago   Up 12 minutes (healthy)   0.0.0.0:80->80/tcp, 22/tcp, 0.0.0.0:443->443/tcp                         foobar-git
+722027c82471   localstack/localstack     "docker-entrypoint.sh"   12 minutes ago   Up 12 minutes (healthy)   127.0.0.1:4510-4559->4510-4559/tcp, 127.0.0.1:4566->4566/tcp, 5678/tcp   foobar-saas
+```
 
 ## Checks
 
