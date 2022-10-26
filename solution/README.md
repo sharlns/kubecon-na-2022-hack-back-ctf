@@ -218,9 +218,34 @@ Check if there is any info related to logging:
     ...
 ```
 
+In another terminal check the logs from the container:
+```bash
+kubectl logs -f -n intersection beep-beep-722gl
+🟢 - green
+🟡 - yellow
+🔴 - red
+🟢 - green
+🟡 - yellow
+🔴 - red
+🟢 - green
+🟡 - yellow
+```
+
 Let's try to stop it:
 ```bash
 gke-test-ctf1-default-pool-f53d5f46-193r ~ # crictl stop 8bc9bef03b864
 8bc9bef03b864
+```
+
+Observe the flag from the logs:
+```bash
+🟢 - green
+🟡 - yellow
+Signal received: terminated
+[PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/ko-app HOSTNAME=beep-beep-722gl SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt KO_DATA_PATH=/var/run/ko KUBERNETES_PORT=tcp://10.72.0.1:443 KUBERNETES_PORT_443_TCP=tcp://10.72.0.1:443 KUBERNETES_PORT_443_TCP_PROTO=tcp KUBERNETES_PORT_443_TCP_PORT=443 KUBERNETES_PORT_443_TCP_ADDR=10.72.0.1 KUBERNETES_SERVICE_HOST=10.72.0.1 KUBERNETES_SERVICE_PORT=443 KUBERNETES_SERVICE_PORT_HTTPS=443 HOME=/home/nonroot]
+AWS_ACCESS_KEY_ID=SOMETHINGSOMETHING
+AWS_SECRET_ACCESS_KEY=FLAG(DodgeViper)
+AWS_DEFAULT_REGION=🗽 - ⬆️  ⬇️  ➡️  ⬅️  - 🍔
+exiting
 ```
 
