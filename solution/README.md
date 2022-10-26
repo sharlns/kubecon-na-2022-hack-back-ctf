@@ -192,9 +192,9 @@ cat his/palms/are/sweaty/knees/weak/arms/are/heavy/theres/vomit/on/his/sweater/a
 FLAG=loseyourself
 ```
 
-## Part 5 - BeepBeep
+## Part 5 - Beep-Beep
 
-Let's inspect what beepbeep is doing. Get the containerID:
+Let's inspect what beep-beep is doing. Get the containerID:
 ```bash
 crictl ps
 CONTAINER           IMAGE               CREATED             STATE               NAME                        ATTEMPT             POD ID

@@ -78,7 +78,7 @@ __Foobar__ Taxi's are pleased to announce that passengers can now update their r
 
 ### Beep Beep
 
-![Traffic lights](./beepbeep.gif)
+![Traffic lights](./beep-beep.gif)
 
 __Foobar__ want to give back to the community, and have developed a system to eliminate traffic congestion in Detroit with the latest AI.
 
@@ -92,7 +92,7 @@ In the event of a crash, we output the all the application details into the log 
 
 #### Beep Beep - Updates
 
-Unexpected costs of running BeepBeep in the cloud have caused us to scale back our workforce considerably. __Foobar__ have been said to be amazed at the unexpected bill as their application is not set to scale.
+Unexpected costs of running Beep-Beep in the cloud have caused us to scale back our workforce considerably. __Foobar__ have been said to be amazed at the unexpected bill as their application is not set to scale.
 
 ### Boombox
 
