@@ -6,6 +6,7 @@
 - [docker-compose](https://docs.docker.com/compose/install/)
 - [aws cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 - [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)
+- [gcloud](https://cloud.google.com/sdk/docs/install)
 
 
 ## Setup
