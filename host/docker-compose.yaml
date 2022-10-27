@@ -1,19 +1,19 @@
 version: "3.8"
 
 services:
-
-  gitlab:
-    container_name: "foobar-git"
-    image: 'gitlab/gitlab-ce:latest'
-    hostname: 'git.foobar.com'
-    ports:
-      - '80:80'
-      - '443:443'
-    volumes:
-      - '$GITLAB_HOME/data/git-data:/var/opt/gitlab/git-data'
-      - '$GITLAB_HOME/data/gitaly:/var/opt/gitlab/gitaly'
-      - '$GITLAB_HOME/data/postgresql:/var/opt/gitlab/postgresql'
-    shm_size: '256m'
+#  gitlab:
+#    container_name: "foobar-git"
+#    image: 'gitlab/gitlab-ce:latest'
+#    hostname: 'git.foobar.com'
+#    ports:
+#      - '9080:80'
+#      - '9022:22'
+#      - '9443:443'
+#    volumes:
+#      - '$GITLAB_HOME/data/git-data:/var/opt/gitlab/git-data'
+#      - '$GITLAB_HOME/data/gitaly:/var/opt/gitlab/gitaly'
+#      - '$GITLAB_HOME/data/postgresql:/var/opt/gitlab/postgresql'
+#    shm_size: '256m'
 
   localstack:
     container_name: "foobar-saas"
