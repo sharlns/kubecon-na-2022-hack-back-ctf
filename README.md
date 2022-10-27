@@ -17,7 +17,7 @@ The solution to the CTF can be found [here](./solution/README.md)
 
 ## External Resources
 
-- [Foobar Taxi Setup](https://github.com/denhamparry/foobar-taxi-setup)
+- [Slides](https://docs.google.com/presentation/d/1WbFAC10gMlJ8vdKuFLWgF8jzBxVrg_ODWk4yq77dbCY/edit?usp=sharing)
 - [Beep-Beep](https://github.com/denhamparry/beep-beep)
 - [Boombox](https://github.com/denhamparry/boombox)
 
